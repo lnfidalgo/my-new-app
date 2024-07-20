@@ -1,6 +1,7 @@
 import Features from "../ui/components/features/page";
 import HeroPage from "../ui/components/hero/page";
 import NavigationBar from "../ui/components/navigation/page";
+import CarouselDemo from "../ui/components/price/price-mobile/page";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <NavigationBar />
       <HeroPage />
       <Features />
+      <CarouselDemo />
     </main>
   );
 }

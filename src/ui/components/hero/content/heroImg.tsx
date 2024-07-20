@@ -9,5 +9,5 @@ export default function HeroImg() {
         <Image src={relaxImage} className="w-full max-h-[450px]" alt="Oi" />
       </div>
     </div>
-  );
+  )
 }
