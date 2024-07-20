@@ -5,16 +5,14 @@ import logoIcon from "@/src/assets/images/undraw_beach_day_cser.svg";
 export default function NavigationContent() {
   return (
     <div className="">
-      <nav className="flex text-white justify-evenly items-center h-14 ">
-        <div className="gap-24 flex">
-          <a href="">FEATURES</a>
+      <nav className="flex text-white justify-between items-center h-14 ">
+        <a href="">FEATURES</a>
 
-          <span className="h-1 w-1 bg-[#435CF0] rounded-full relative top-2.5 "></span>
+        <span className="h-1 w-1 bg-[#435CF0] rounded-full"></span>
 
-          <a href="">PRICING</a>
-        </div>
+        <a href="">PRICING</a>
 
-        <div className="flex items-center justify-center gap-4 mx-6">
+        <div className="flex items-center justify-center gap-4">
           <Image
             width={"45"}
             height={"45"}
@@ -24,13 +22,11 @@ export default function NavigationContent() {
           <h2 className="text-2xl font-bold">PETS</h2>
         </div>
 
-        <div className="flex gap-24">
-          <a href="">FAQ</a>
-          <span className="h-1 w-1 bg-[#435CF0] rounded-full relative top-2.5 "></span>
-          <LoginButton>
-            <a href="">Log in</a>
-          </LoginButton>
-        </div>
+        <a href="">FAQ</a>
+        <span className="h-1 w-1 bg-[#435CF0] rounded-full"></span>
+        <LoginButton>
+          <a href="">Log in</a>
+        </LoginButton>
       </nav>
     </div>
   );
