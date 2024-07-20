@@ -6,7 +6,7 @@ interface NavigationRootProps {
 
 export default function NavigationRoot({ children }: NavigationRootProps) {
   return (
-    <nav className="flex text-white justify-between items-center h-14 md:block">
+    <nav className="flex fixed px-20 top-0 left-0 right-0 text-white justify-between items-center h-14 bg-[#080D27] shadow-lg z-10 md:block">
       {children}
     </nav>
   );
