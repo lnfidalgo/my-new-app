@@ -1,5 +1,5 @@
-import HeroText from "./content/heroText";
-import HeroImg from "./content/heroImg";
+import HeroText from "./heroText";
+import HeroImg from "./heroImg";
 import HeroRoot from "./heroRoot";
 
 export default function HeroPage() {

@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactNode } from "react";
 
 interface TableRoot {
@@ -5,5 +6,9 @@ interface TableRoot {
 }
 
 export default function TableRoot({ children }: TableRoot) {
-  return <div className="text-white flex flex-col gap-14">{children}</div>;
+  return (
+    <div className="text-white flex flex-col gap-14">
+      {children}
+    </div>
+  );
 }
