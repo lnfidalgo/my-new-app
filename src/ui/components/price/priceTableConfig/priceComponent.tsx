@@ -3,7 +3,7 @@ interface PriceComponentProps {
   price: string;
   subtiltle: string;
   className?: string;
-  id: string;
+  id: number;
 }
 
 export default function PriceComponent({
@@ -15,7 +15,7 @@ export default function PriceComponent({
   let content;
 
   switch (id) {
-    case "one":
+    case 1:
       content = (
         <div className="flex flex-col justify-center items-center">
           <p className="text-xs p-1.5 rounded-full border tracking-widest text-teal-400 border-teal-400">
@@ -26,7 +26,7 @@ export default function PriceComponent({
         </div>
       );
       break;
-    case "two":
+    case 2:
       content = (
         <div className="flex flex-col justify-center items-center">
           <p className="text-xs p-1.5 rounded-full border tracking-widest text-amber-400 border-amber-400">
@@ -37,7 +37,7 @@ export default function PriceComponent({
         </div>
       );
       break;
-    case "three":
+    case 3:
       content = (
         <div className="flex flex-col justify-center items-center">
           <p className="text-xs p-1.5 rounded-full border tracking-widest text-teal-400 border-teal-400">

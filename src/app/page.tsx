@@ -1,3 +1,4 @@
+import Faq from "../ui/components/faq/page";
 import Features from "../ui/components/features/page";
 import HeroPage from "../ui/components/hero/page";
 import NavigationBar from "../ui/components/navigation/page";
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroPage />
       <Features />
       <CarouselDemo />
+      <Faq />
     </main>
   );
 }

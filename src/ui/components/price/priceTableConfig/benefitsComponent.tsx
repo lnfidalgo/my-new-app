@@ -1,13 +1,13 @@
 import { HiArchive, HiChartBar, HiChip, HiCloudDownload } from "react-icons/hi";
 
 interface BenefitsComponentProps {
-  id: string; 
+  id: number; 
 }
 
 export default function BenefitsComponent({ id }: BenefitsComponentProps) {
   let content;
   switch (id) {
-    case 'one':
+    case 1:
       content = (
         <div className="flex flex-col gap-7">
           <div className="flex justify-center items-center gap-4">
@@ -29,7 +29,7 @@ export default function BenefitsComponent({ id }: BenefitsComponentProps) {
         </div>
       );
       break;
-    case 'two':
+    case 2:
       content = (
         <div className="flex flex-col gap-7">
           <div className="flex justify-center items-center gap-4">
@@ -51,7 +51,7 @@ export default function BenefitsComponent({ id }: BenefitsComponentProps) {
         </div>
       );
       break
-    case 'three':
+    case 3:
       content = (
         <div className="flex flex-col gap-7">
           <div className="flex justify-center items-center gap-4">

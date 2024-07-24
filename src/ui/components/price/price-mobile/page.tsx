@@ -18,28 +18,28 @@ export default function CarouselDemo() {
   const [windowSize, setWindowSize] = useState(0);
 
   useEffect(() => {
-    const handleSize=() => {
-      setWindowSize(window.innerWidth)
+    const handleSize = () => {
+      setWindowSize(window.innerWidth);
     };
-    handleSize()
+    handleSize();
   }, []);
 
   const slidesContent = [
     {
       usage: "TEAM",
-      id: "one",
+      id: 1,
       price: "$19",
       subtitle: "Best for solo creators",
     },
     {
       usage: "RODRIGO",
-      id: "two",
+      id: 2,
       price: "$79",
       subtitle: "Most popular plan",
     },
     {
       usage: "LUCAS",
-      id: "three",
+      id: 3,
       price: "$39",
       subtitle: "Exclusively for teams",
     },
