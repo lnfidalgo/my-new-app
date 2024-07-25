@@ -14,6 +14,7 @@ export default function LoginButton({
   asChild,
 }: LoginButtonProps) {
   const router = useRouter()
-  const onClicks = () => router.push('/auth/login');
+  const onClicks=() => router.push('/auth/login');
+  
   return <span onClick={onClicks}>{children}</span>;
 }

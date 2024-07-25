@@ -1,5 +1,7 @@
+import { LoginForm } from "@/src/ui/auth/loginForm";
+
 export default function LoginPage() {
   return (
-    <h1>login</h1>
+    <LoginForm />
   )
 }
