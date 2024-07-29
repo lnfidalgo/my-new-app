@@ -1,7 +1,6 @@
 import Credentials from "next-auth/providers/credentials";
 import type { NextAuthConfig } from "next-auth";
 import bcrypt from "bcryptjs";
-
 import { LoginSchema } from "./schemas";
 import { getUserByEmail } from "./data/user";
 
@@ -21,7 +20,6 @@ export default {
 
           if (passwordMatch) return user;
         }
-
         return null;
       },
     }),
