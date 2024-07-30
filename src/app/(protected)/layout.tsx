@@ -6,7 +6,7 @@ interface ProtectedLayoutProps {
 
 export default function ProtectedLayout({ children }: ProtectedLayoutProps) {
   return (
-    <div className="h-screen w-screen grid grid-rows-3 grid-flow-col bg-white">
+    <div className="bg-white">
       {children}
     </div>
   );

@@ -17,22 +17,23 @@ export function UserButton() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Avatar>
+      <DropdownMenuTrigger className="border-2 p-2 rounded-xl border-gray-200 hover:border-gray-300">
+        <Avatar className="flex items-center gap-3 w-32">
           <AvatarImage />
           <AvatarFallback>
             <FaUser />
           </AvatarFallback>
+          <div>{`Olá ${user?.name}`}</div>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <LogoutButton>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="gap-2">
             <TbDoorExit />
             Logout
           </DropdownMenuItem>
         </LogoutButton>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
