@@ -13,7 +13,7 @@ interface HeaderProps {
 export function Header({ label }: HeaderProps) {
   return (
     <div className="w-full justify-center items-center gap-y-4 flex flex-col">
-      <h1 className="">Auth</h1>
+      <h1 className="">PETS</h1>
       <p className="text-muted-foreground text-sm">{label}</p>
     </div>
   );

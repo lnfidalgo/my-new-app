@@ -2,8 +2,11 @@ import { Input } from "@/components/ui/input";
 import { UserButton } from "@/src/ui/auth/userButton";
 import { IoMdNotifications } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { auth } from "@/src/auth";
+import { useCurrentUser } from "@/src/hooks/useCurrentUser";
 
 export function Navigation() {
+  const user = useCurrentUser();
 
   return (
     <div className="w-full h-screen pr-6">
@@ -15,15 +18,26 @@ export function Navigation() {
         <IoMdNotifications className="cursor-pointer w-28" />
         <UserButton />
       </div>
-      <div className="text-gray-600 mt-6">
-        <h1 className="text-4xl font-bold">Home</h1>
-        <p className="">
-          Connect all your social channel to leverage the best performance from
-          your collection pipelines
-        </p>
-        <div className=" gap-8 mt-8">
-          
-        </div>
+      <div className="text-gray-600 mt-6 pr-2">
+        {user?.role === "USER" ? (
+          <>
+            <h1 className="text-4xl font-bold">Home</h1>
+            <p className="">
+              Connect all your social channel to leverage the best performance
+              from your collection pipelines
+            </p>
+            <div className=" gap-8 mt-8">Usuário</div>
+          </>
+        ) : (
+          <>
+            <h1 className="text-4xl font-bold">Home</h1>
+            <p className="">
+              Connect all your social channel to leverage the best performance
+              from your collection pipelines
+            </p>
+            <div className=" gap-8 mt-8">Admin</div>
+          </>
+        )}
       </div>
     </div>
   );

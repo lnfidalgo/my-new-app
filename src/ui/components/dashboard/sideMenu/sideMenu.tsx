@@ -6,7 +6,7 @@ import { TbDoorExit } from "react-icons/tb";
 
 export default function SideMenu() {
   return (
-    <div className="h-screen w-80 items-center justify-center relative border pt-3">
+    <div className="h-screen w-80 items-center justify-center relative border pt-3 pl-2">
       <div className="flex items-center justify-center gap-4">
         <Image
           width={"45"}

@@ -1,5 +1,6 @@
 import Faq from "../ui/components/faq/page";
 import Features from "../ui/components/features/page";
+import { Footer } from "../ui/components/footer/footer";
 import HeroPage from "../ui/components/hero/page";
 import NavigationBar from "../ui/components/navigation/page";
 import CarouselDemo from "../ui/components/price/price-mobile/page";
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <CarouselDemo />
       <Faq />
+      <Footer />
     </main>
   );
 }
