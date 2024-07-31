@@ -2,6 +2,18 @@
   "name": "my-new-app",
   "version": "0.1.0",
   "private": true,
+  "husky":  {
+    "hooks":  {
+      "pre-commit":  "lint-staged"
+    }
+  },
+  "lint-staged":  {
+    "**/*.js":  [
+      "prettier --check",
+      "./node_modules/.bin/eslint",
+      "git add"
+    ]
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
