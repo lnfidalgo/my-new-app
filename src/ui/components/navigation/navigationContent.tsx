@@ -6,11 +6,11 @@ export default function NavigationContent() {
   return (
     <div className="">
       <nav className="flex text-white justify-between items-center h-14 ">
-        <a href="">FEATURES</a>
+        <a href="">Features</a>
 
         <span className="h-1 w-1 bg-[#435CF0] rounded-full"></span>
 
-        <a href="">PRICING</a>
+        <a href="">Pricing</a>
 
         <div className="flex items-center justify-center gap-4">
           <Image
@@ -22,10 +22,10 @@ export default function NavigationContent() {
           <h2 className="text-2xl font-bold">PETS</h2>
         </div>
 
-        <a href="">FAQ</a>
+        <a href="">Faq</a>
         <span className="h-1 w-1 bg-[#435CF0] rounded-full"></span>
         <LoginButton>
-          <a href="">Log in</a>
+          <button>Log in</button>
         </LoginButton>
       </nav>
     </div>
