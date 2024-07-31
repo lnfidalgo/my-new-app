@@ -1,7 +1,7 @@
 import { FaCheckCircle } from "react-icons/fa";
 
 interface FormErrorProps {
-  message?: string;
+  message?: string
 }
 
 export function FormSuccess({ message }: FormErrorProps) {
