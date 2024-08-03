@@ -40,7 +40,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="flex gap-6 items-center justify-center h-96 text-white mt-10 border-t-white border-t md:grid md:grid-cols-2 ">
+    <footer className="flex gap-6 items-center justify-center h-96 text-white mt-28 border-t-white border-t md:grid md:grid-cols-2 ">
       <div className="flex flex-col gap-10 h-full items-center justify-center">
         <ul className="flex flex-col gap-3">
           {footerItems.map((item, index) => (
@@ -49,7 +49,7 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <div className="flex gap-5 xl:gap-10">
+        <div className="flex flex-col gap-5 xl:gap-10">
           <p>Copyright Ul8, LLC.</p>
           <div className="flex flex-col gap-1 md:flex-row md:gap-3">
             <Link

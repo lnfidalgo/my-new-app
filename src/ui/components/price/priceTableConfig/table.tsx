@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import HeroButton from "../../hero/heroButton";
@@ -14,48 +14,62 @@ export default function TableXlScreens() {
     {
       usage: "TEAM",
       id: 1,
-      price: "$19",
+      monthPrice: "$19",
+      annualPrice: "$190",
       subtitle: "Best for solo creators",
     },
     {
       usage: "RODRIGO",
       id: 2,
-      price: "$79",
+      monthPrice: "$79",
+      annualPrice: "$670",
       subtitle: "Most popular plan",
     },
     {
       usage: "LUCAS",
       id: 3,
-      price: "$39",
+      monthPrice: "$39",
+      annualPrice: "$390",
       subtitle: "Exclusively for teams",
     },
   ];
 
   return (
     <div>
-      <div className="text-white">
-        <button
-          className={`px-4 py-2 rounded-l ${billingCycle === "monthly" ? "bg-blue-400" : "bg-slate-400"}`}
-          onClick={() => setBillingCycle("monthly")}
-        >
-          Monthly
-        </button>
-        <button
-          className={`px-4 py-2 rounded-l ${billingCycle === "annual" ? "bg-blue-400" : "bg-slate-400"}`}
-          onClick={() => setBillingCycle("annual")}
-        >
-          Annual
-        </button>
+      <div className="text-white flex flex-col pt-40 justify-center items-center gap-10">
+        <div>
+          <h2 className="text-4xl font-bold text-center">
+            Flexible pricing <br/> for teams of all sizes
+          </h2>
+        </div>
+        <div className="bg-[#0b1235] border border-[#5f5ddf] rounded-xl p-1.5">
+          <button
+            className={`px-10 py-4 rounded-lg ${billingCycle === "monthly" ? "bg-[#2b3a88]" : ""}`}
+            onClick={() => setBillingCycle("monthly")}
+          >
+            MONTHLY
+          </button>
+          <button
+            className={`px-10 py-4 rounded-lg ${billingCycle === "annual" ? "bg-[#2b3a88]" : ""}`}
+            onClick={() => setBillingCycle("annual")}
+          >
+            ANNUAL
+          </button>
+        </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto mt-40">
-        {slidesContent.map((slide) => (
+      <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto mt-6">
+        {slidesContent.map((slide, index) => (
           <TableRoot
-            key={slide.id}
+            key={index}
             className="gap-16 flex flex-col mt-10 border-2 rounded-2xl border-[#5f5ddf] p-14 relative"
           >
             <PriceComponent
               id={slide.id}
-              price={slide.price}
+              price={
+                billingCycle === "monthly"
+                  ? slide.monthPrice
+                  : slide.annualPrice
+              }
               subtiltle={slide.subtitle}
               usage={slide.usage}
             />

@@ -24,7 +24,7 @@ export default function HamburguerContent() {
       animate="open"
       initial="close"
       exit="close"
-      className="fixed inset-0 bg-[#192965] space-y-10 p-6 container mx-auto flex justify-center items-center"
+      className="fixed inset-0 bg-gradient-to-b from-[#211f8b] to-[#080D27] space-y-10 p-6 container flex justify-center items-center"
     >
       <motion.div
         variants={{

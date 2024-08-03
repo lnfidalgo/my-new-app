@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 import TableXlScreens from "../priceTableConfig/table";
 
 export default function Price() {
-  const [windowSize, setWindowSize] = useState(0);
+  const [windowSize, setWindowSize]=useState(0);
+  const [billingCycle, setBillingCycle] = useState("monthly");
 
   useEffect(() => {
     const handleSize = () => {
@@ -28,25 +29,52 @@ export default function Price() {
     {
       usage: "TEAM",
       id: 1,
-      price: "$19",
+      monthPrice: "$19",
+      annualPrice: "$190",
       subtitle: "Best for solo creators",
     },
     {
       usage: "RODRIGO",
       id: 2,
-      price: "$79",
+      monthPrice: "$79",
+      annualPrice: "$670",
       subtitle: "Most popular plan",
     },
     {
       usage: "LUCAS",
       id: 3,
-      price: "$39",
+      monthPrice: "$39",
+      annualPrice: "$390",
       subtitle: "Exclusively for teams",
     },
   ];
 
   return (
     <div id="price">
+      {windowSize <= 1280 && (
+        <div className="text-white flex flex-col pt-20 justify-center items-center gap-10">
+          <div>
+            <h2 className="text-4xl font-bold text-center">
+              Flexible pricing <br /> for teams of all sizes
+            </h2>
+          </div>
+          <div className="bg-[#0b1235] border border-[#5f5ddf] rounded-xl p-1.5">
+            <button
+              className={`px-10 py-4 rounded-lg ${billingCycle === "monthly" ? "bg-[#2b3a88]" : ""}`}
+              onClick={() => setBillingCycle("monthly")}
+            >
+              MONTHLY
+            </button>
+            <button
+              className={`px-10 py-4 rounded-lg ${billingCycle === "annual" ? "bg-[#2b3a88]" : ""}`}
+              onClick={() => setBillingCycle("annual")}
+            >
+              ANNUAL
+            </button>
+          </div>
+        </div>
+      )}
+
       <Carousel className="w-full mt-12 xl:hidden">
         <CarouselContent>
           {slidesContent.map((slide, index) => (
@@ -58,7 +86,11 @@ export default function Price() {
                       <PriceComponent
                         usage={slide.usage}
                         id={slide.id}
-                        price={slide.price}
+                        price={
+                          billingCycle === "monthly"
+                            ? slide.monthPrice
+                            : slide.annualPrice
+                        }
                         subtiltle={slide.subtitle}
                       />
                       <DividerLine />

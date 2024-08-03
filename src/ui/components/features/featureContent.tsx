@@ -18,7 +18,7 @@ export default function FeatureContent({
   return (
     <div
       className={twMerge(
-        "flex flex-col w-full flex-wrap justify-between lg:justify-between  text-white bg-gradient-to-b from-[#211f8b] to-[#080D27] px-3 py-10 md:px-8 xl:pb-20",
+        "flex flex-col w-full flex-wrap justify-between text-white bg-gradient-to-b from-[#211f8b] to-[#080D27] px-3 py-10 md:px-8 xl:pb-20",
         className,
       )}
     >
