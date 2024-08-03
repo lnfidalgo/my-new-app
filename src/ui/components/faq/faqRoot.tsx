@@ -6,6 +6,6 @@ interface FaqRootProps {
 
 export default function FaqRoot({ children }: FaqRootProps) {
   return (
-    <div className="text-white mt-24 xl:mx-auto xl:w-[1200px]">{children}</div>
+    <div className="text-white mt-24 xl:mx-auto xl:mt-40 2xl:w-[1200px] ">{children}</div>
   )
 }

@@ -12,6 +12,7 @@ export default function AccordionDemo() {
       accordionTitle: "How easy is to setup Pets?",
       accordionContent:
         "Alguma explicação sobre o título acima vai ser colocada aqui.",
+      value: "item-1",
     },
     {
       id: 2,
@@ -43,6 +44,18 @@ export default function AccordionDemo() {
       accordionContent:
         "Alguma explicação sobre o título acima vai ser colocada aqui.",
     },
+    {
+      id: 7,
+      accordionTitle: "How do i invite my team?",
+      accordionContent:
+        "Alguma explicação sobre o título acima vai ser colocada aqui.",
+    },
+    {
+      id: 8,
+      accordionTitle: "Do you offer trainig for individuals and teams?",
+      accordionContent:
+        "Alguma explicação sobre o título acima vai ser colocada aqui.",
+    },
   ];
 
   return (
@@ -52,10 +65,13 @@ export default function AccordionDemo() {
           type="single"
           key={index}
           collapsible
-          className="w-full justify-stretch flex"
+          className="w-full md:h-40 sm:h-full justify-start items flex p-3 rounded-md bg-[#0c1233]"
         >
-          <AccordionItem value="item-1" className="flex flex-col justify-center">
-            <AccordionTrigger className=" gap-5 font-bold xl:text-xl">
+          <AccordionItem
+            value="item-1"
+            className="flex flex-col justify-center border-none"
+          >
+            <AccordionTrigger className="gap-6 font-bold xl:text-xl ">
               {accordion.accordionTitle}
             </AccordionTrigger>
             <AccordionContent className="font-semibold text-base xl:text-lg">

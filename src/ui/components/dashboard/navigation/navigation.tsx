@@ -12,7 +12,7 @@ export function Navigation() {
     <div className="w-full h-screen pr-6">
       <div className="flex items-center gap-2 h-20">
         <div className="relative w-full">
-          <CiSearch className="absolute left-0 top-0 m-2.5 h-5 w-5 text-muted-foreground" />
+          <CiSearch className="absolute left-0 top-0 m-2.5 h-5 w-5 text-red-500" />
           <Input placeholder="Search..." className="pl-10" />
         </div>
         <IoMdNotifications className="cursor-pointer w-28" />

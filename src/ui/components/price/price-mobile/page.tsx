@@ -14,7 +14,7 @@ import TableRoot from "../priceTableConfig/tableRoot";
 import { useEffect, useState } from "react";
 import TableXlScreens from "../priceTableConfig/table";
 
-export default function CarouselDemo() {
+export default function Price() {
   const [windowSize, setWindowSize] = useState(0);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function CarouselDemo() {
   ];
 
   return (
-    <>
+    <div id="price">
       <Carousel className="w-full mt-12 xl:hidden">
         <CarouselContent>
           {slidesContent.map((slide, index) => (
@@ -73,6 +73,6 @@ export default function CarouselDemo() {
         </CarouselContent>
       </Carousel>
       {windowSize >= 1280 && <TableXlScreens />}
-    </>
+    </div>
   );
 }

@@ -28,7 +28,7 @@ export function UserButton() {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <LogoutButton>
-          <DropdownMenuItem className="gap-2">
+          <DropdownMenuItem className="gap-2 cursor-pointer">
             <TbDoorExit />
             Logout
           </DropdownMenuItem>

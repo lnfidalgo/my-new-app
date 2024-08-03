@@ -23,7 +23,7 @@ export default function FeatureContent({
       )}
     >
       <div className="border-2 rounded-full h-16 w-16 flex justify-center items-center  md:h-24 md:w-24 ">
-        <div className="h-14 w-14 bg-[#6097d6] rounded-full flex justify-center items-center border-4 md:h-20 md:w-20">
+        <div className="h-14 w-14 bg-[#4547c4] rounded-full flex justify-center items-center border-4 md:h-20 md:w-20">
           <DiApple size={30} className="lg:size-11" />
         </div>
       </div>
