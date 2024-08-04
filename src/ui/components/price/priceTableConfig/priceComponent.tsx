@@ -2,8 +2,8 @@ interface PriceComponentProps {
   usage: string;
   price: string;
   subtiltle: string;
-  className?: string;
   id: number;
+  className?: string;
 }
 
 export default function PriceComponent({
@@ -11,6 +11,7 @@ export default function PriceComponent({
   price,
   subtiltle,
   id,
+  className,
 }: PriceComponentProps) {
   let content;
 

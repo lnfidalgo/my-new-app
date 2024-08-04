@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import HeroButton from "../../hero/heroButton";
+import HeroButton from "../../button";
 import BenefitsComponent from "./benefitsComponent";
 import DividerLine from "./dividerLine";
 import PriceComponent from "./priceComponent";
@@ -17,6 +17,7 @@ export default function TableXlScreens() {
       monthPrice: "$19",
       annualPrice: "$190",
       subtitle: "Best for solo creators",
+      featured: false,
     },
     {
       usage: "RODRIGO",
@@ -24,6 +25,7 @@ export default function TableXlScreens() {
       monthPrice: "$79",
       annualPrice: "$670",
       subtitle: "Most popular plan",
+      featured: true,
     },
     {
       usage: "LUCAS",
@@ -31,6 +33,7 @@ export default function TableXlScreens() {
       monthPrice: "$39",
       annualPrice: "$390",
       subtitle: "Exclusively for teams",
+      featured: false,
     },
   ];
 
@@ -39,7 +42,7 @@ export default function TableXlScreens() {
       <div className="text-white flex flex-col pt-40 justify-center items-center gap-10">
         <div>
           <h2 className="text-4xl font-bold text-center">
-            Flexible pricing <br/> for teams of all sizes
+            Flexible pricing <br /> for teams of all sizes
           </h2>
         </div>
         <div className="bg-[#0b1235] border border-[#5f5ddf] rounded-xl p-1.5">
@@ -57,25 +60,35 @@ export default function TableXlScreens() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-w-[1200px] mx-auto mt-6">
+      <div className="grid grid-cols-3 max-w-[1200px] mx-auto mt-6">
         {slidesContent.map((slide, index) => (
           <TableRoot
             key={index}
-            className="gap-16 flex flex-col mt-10 border-2 rounded-2xl border-[#5f5ddf] p-14 relative"
+            className={`md:flex md:mt-10 md:border-2 md:rounded-2xl md:border-[#5f5ddf] md:p-14 ${slide.featured ? '' : ''}`}
           >
-            <PriceComponent
-              id={slide.id}
-              price={
-                billingCycle === "monthly"
+            <div
+              className={`flex flex-col justify-center items-center ${slide.featured ? "md:" : "md:"}`}
+            >
+              <p
+                className={`text-xs p-1.5 rounded-full border tracking-widest  ${slide.featured ? "text-amber-400 border-amber-400" : "text-teal-400 border-teal-400"}`}
+              >
+                {slide.usage}
+              </p>
+              <h2
+                className={`text-6xl font-bold pb-2 pt-6 ${slide.featured ? "text-amber-400" : "text-white"}`}
+              >
+                {billingCycle === "monthly"
                   ? slide.monthPrice
-                  : slide.annualPrice
-              }
-              subtiltle={slide.subtitle}
-              usage={slide.usage}
-            />
+                  : slide.annualPrice}
+              </h2>
+              <p className="text-lg">{slide.subtitle}</p>
+            </div>
             <DividerLine />
             <BenefitsComponent id={slide.id} />
-            <HeroButton className="mx-auto px-8 py-3 text-base gap-4" />
+            <HeroButton
+              buttonName="TRY IT NOW"
+              className="mx-auto px-8 py-3 text-base gap-4"
+            />
           </TableRoot>
         ))}
       </div>

@@ -10,8 +10,8 @@ import Price from "../ui/components/price/price-mobile/page";
 
 export default function Home() {  
   return (
-    <main className="bg-[#080D27] px-5 lg:px-32">
-      <NavigationBar/>
+    <main className="bg-gradient-to-b from-[#080D27] via-[#0d153d] to-[#080D27] px-5 lg:px-32">
+      <NavigationBar />
       <HeroPage />
       <Features />
       <Price />

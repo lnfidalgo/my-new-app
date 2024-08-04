@@ -1,6 +1,6 @@
 import { DiApple } from "react-icons/di";
-import HeroButton from "../hero/heroButton";
 import { twMerge } from "tailwind-merge";
+import Button from "../button";
 
 interface FeatureContentProps {
   shortText: string;
@@ -36,7 +36,7 @@ export default function FeatureContent({
       <p className="font-light mb-10 md:text-xl md:font-normal break-words">
         {subtitle}
       </p>
-      <HeroButton className="md:p-4 md:text-base" />
+      <Button buttonName="TRY IT NOW" />
     </div>
   );
 }

@@ -18,8 +18,8 @@ export default function NavigationBar() {
 
   return (
     <NavigationRoot>
-      <NavLogo />
       {windowSize >= 428 && <NavigationContent />}
+      <NavLogo />
       <HamburguerComponent />
     </NavigationRoot>
   );

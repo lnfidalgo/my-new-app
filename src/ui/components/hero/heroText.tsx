@@ -1,4 +1,4 @@
-import HeroButton from "./heroButton";
+import Button from "../button";
 import { twMerge } from "tailwind-merge";
 
 interface HeroTextProps {
@@ -30,7 +30,7 @@ export default function HeroText({
       <p className={twMerge("font-light mb-5 w-64 md:text-xl", className)}>
         {subtitle}
       </p>
-      <HeroButton className="md:p-4 md:text-base" />
+      <Button className="md:p-4 md:text-base" buttonName="TRY IT NOW" />
     </div>
   );
 }

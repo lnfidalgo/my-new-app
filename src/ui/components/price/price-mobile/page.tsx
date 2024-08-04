@@ -9,13 +9,13 @@ import {
 import PriceComponent from "../priceTableConfig/priceComponent";
 import DividerLine from "../priceTableConfig/dividerLine";
 import BenefitsComponent from "../priceTableConfig/benefitsComponent";
-import HeroButton from "../../hero/heroButton";
+import Button from "../../button";
 import TableRoot from "../priceTableConfig/tableRoot";
 import { useEffect, useState } from "react";
 import TableXlScreens from "../priceTableConfig/table";
 
 export default function Price() {
-  const [windowSize, setWindowSize]=useState(0);
+  const [windowSize, setWindowSize] = useState(0);
   const [billingCycle, setBillingCycle] = useState("monthly");
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Price() {
 
   return (
     <div id="price">
-      {windowSize <= 1280 && (
+      {windowSize <= 1279 && (
         <div className="text-white flex flex-col pt-20 justify-center items-center gap-10">
           <div>
             <h2 className="text-4xl font-bold text-center">
@@ -95,7 +95,7 @@ export default function Price() {
                       />
                       <DividerLine />
                       <BenefitsComponent id={slide.id} />
-                      <HeroButton className="mx-auto px-8 py-3 text-base gap-4" />
+                      <Button buttonName="TRY IT NOW" className="mx-auto px-8 py-3 text-base gap-4" />
                     </TableRoot>
                   </CardContent>
                 </Card>

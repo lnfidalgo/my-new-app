@@ -3,10 +3,11 @@ import { MdOutlinePets } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
 
 interface HeroButtonProps {
+  buttonName: string
   className?: string;
 }
 
-export default function HeroButton({ className }: HeroButtonProps) {
+export default function Button({ className, buttonName }: HeroButtonProps) {
   return (
     <LoginButton>
       <button
@@ -16,7 +17,7 @@ export default function HeroButton({ className }: HeroButtonProps) {
         )}
       >
         <MdOutlinePets className="size-5 lg:size-7" />
-        TRY IT NOW
+        {buttonName}
       </button>
     </LoginButton>
   );

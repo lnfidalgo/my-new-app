@@ -40,34 +40,37 @@ export function Footer() {
   ];
 
   return (
-    <footer className="flex gap-6 items-center justify-center h-96 text-white mt-28 border-t-white border-t md:grid md:grid-cols-2 ">
+    <footer className="flex gap-6 items-center justify-center h-96 text-white mt-28 border-t-white border-t md:grid md:grid-cols-2 md:max-w-[1200px] md:mx-auto ">
       <div className="flex flex-col gap-10 h-full items-center justify-center">
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col w-full gap-3 items-start md:pl-10">
           {footerItems.map((item, index) => (
-            <li key={index} className="text-xl font-semibold hover:text-slate-400 md:text-3xl">
+            <li
+              key={index}
+              className="text-xl font-semibold hover:text-slate-400 md:text-3xl"
+            >
               <Link href={"/"}>{item.itemName}</Link>
             </li>
           ))}
         </ul>
-        <div className="flex flex-col gap-5 xl:gap-10">
+        <div className="flex flex-col w-full md:pl-10 md:flex-row gap-5 xl:justify-between">
           <p>Copyright Ul8, LLC.</p>
           <div className="flex flex-col gap-1 md:flex-row md:gap-3">
             <Link
               href={"/"}
-              className="text-sm cursor-pointer hover:text-slate-300"
+              className="text-sm cursor-pointer hover:text-slate-300 hover:underline"
             >
               Privacy policy
             </Link>
             <Link
               href={"/"}
-              className="text-sm cursor-pointer hover:text-slate-300"
+              className="text-sm cursor-pointer hover:text-slate-300 hover:underline"
             >
               Terms of service
             </Link>
           </div>
         </div>
       </div>
-      <div className="h-full flex flex-col items-center justify-center xl:items-start">
+      <div className="h-full flex flex-col border-l pl-5 items-center justify-center xl:items-start ">
         <div className=" flex flex-col gap-4">
           <h2 className="text-2xl font-semibold md:text-3xl">Subscribe</h2>
           <p className="md:text-lg xl:pb-6">

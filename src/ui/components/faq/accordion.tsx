@@ -65,7 +65,7 @@ export default function AccordionDemo() {
           type="single"
           key={index}
           collapsible
-          className="w-full md:h-40 sm:h-full justify-start items flex p-3 rounded-md bg-[#0c1233]"
+          className="w-full md:h-40 sm:h-full justify-start items flex p-3 rounded-md bg-[#0f153d]"
         >
           <AccordionItem
             value="item-1"
