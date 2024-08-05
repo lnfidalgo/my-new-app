@@ -2,7 +2,6 @@ import { Input } from "@/components/ui/input";
 import { UserButton } from "@/src/ui/auth/userButton";
 import { IoMdNotifications } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
-import { auth } from "@/src/auth";
 import { useCurrentUser } from "@/src/hooks/useCurrentUser";
 
 export function Navigation() {
@@ -10,13 +9,15 @@ export function Navigation() {
 
   return (
     <div className="w-full h-screen pr-6">
-      <div className="flex items-center gap-2 h-20">
+      <div className="flex items-center gap-32 h-20">
         <div className="relative w-full">
           <CiSearch className="absolute left-0 top-0 m-2.5 h-5 w-5 text-red-500" />
           <Input placeholder="Search..." className="pl-10" />
         </div>
-        <IoMdNotifications className="cursor-pointer w-28" />
-        <UserButton />
+        <div className="flex justify-center items-center gap-5">
+          <IoMdNotifications className="cursor-pointer w-7 h-7" />
+          <UserButton />
+        </div>
       </div>
       <div className="text-gray-600 mt-6 pr-2">
         {user?.role === "USER" ? (

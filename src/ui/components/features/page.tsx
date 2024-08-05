@@ -1,7 +1,6 @@
 import FeatureRoot from "./featureRoot";
 import FeatureContent from "./featureContent";
 import FeatureFooter from "./featureFooter";
-import Button from "../button";
 
 export default function Features() {
   return (

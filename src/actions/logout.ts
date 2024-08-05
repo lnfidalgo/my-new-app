@@ -1,8 +1,8 @@
 "use server";
 
 import { signOut } from "@/src/auth";
-import { redirect } from "next/navigation";
+import { DEFAULT_LOGOUT_REDIRECT } from "../routes";
 
 export const logout = async () => {
-  await signOut();
+  await signOut({redirectTo: DEFAULT_LOGOUT_REDIRECT });
 };

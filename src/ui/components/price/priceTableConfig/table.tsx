@@ -60,11 +60,11 @@ export default function TableXlScreens() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 max-w-[1200px] mx-auto mt-6">
+      <div className="grid grid-cols-3 items-center max-w-[1200px] mx-auto mt-6">
         {slidesContent.map((slide, index) => (
           <TableRoot
             key={index}
-            className={`md:flex md:mt-10 md:border-2 md:rounded-2xl md:border-[#5f5ddf] md:p-14 ${slide.featured ? '' : ''}`}
+            className={`md:flex md:mt-10 md:border-2 md:rounded-3xl md:border-[#5f5ddf] md:p-14 ${slide.featured ? 'h-[760px] justify-center' : 'h-[670.5px]'}`}
           >
             <div
               className={`flex flex-col justify-center items-center ${slide.featured ? "md:" : "md:"}`}

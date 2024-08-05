@@ -69,9 +69,9 @@ export default function AccordionDemo() {
         >
           <AccordionItem
             value="item-1"
-            className="flex flex-col justify-center border-none"
+            className="flex flex-col justify-center border-none w-full"
           >
-            <AccordionTrigger className="gap-6 font-bold xl:text-xl ">
+            <AccordionTrigger className="gap-6 text-left font-bold xl:text-xl ">
               {accordion.accordionTitle}
             </AccordionTrigger>
             <AccordionContent className="font-semibold text-base xl:text-lg">

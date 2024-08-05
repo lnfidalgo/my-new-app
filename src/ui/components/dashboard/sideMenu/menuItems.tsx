@@ -49,7 +49,7 @@ export function MenuItems() {
         {menuItems.map((menu, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 text-gray-500 cursor-pointer"
+            className="flex items-center gap-2 text-gray-500 cursor-pointer transition ease-in duration-300 hover:-translate-y-1 hover:scale-110"
           >
             {menu.menuIcon}
             {menu.menuText}
