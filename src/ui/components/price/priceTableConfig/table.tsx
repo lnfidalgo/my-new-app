@@ -41,7 +41,7 @@ export default function TableXlScreens() {
     <div>
       <div className="text-white flex flex-col pt-40 justify-center items-center gap-10">
         <div>
-          <h2 className="text-4xl font-bold text-center">
+          <h2 className="text-5xl font-bold text-center">
             Flexible pricing <br /> for teams of all sizes
           </h2>
         </div>

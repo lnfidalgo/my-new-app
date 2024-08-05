@@ -1,5 +1,3 @@
-"use client";
-
 import { FaUser } from "react-icons/fa";
 import { TbDoorExit } from "react-icons/tb";
 import {
